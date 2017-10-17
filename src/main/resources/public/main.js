@@ -1,11 +1,11 @@
-$("#hotel_content").load('html/dashboard.html');
+$("#movie_content").load('html/dashboard.html');
 
-$("#button_guest").click(function(){
-    $("#hotel_content").load('html/movie.html');
+$("#button_movie").click(function(){
+    $("#movie_content").load('html/movie.html');
 });
 
 $("#button_dashboard").click(function(){
-    $("#hotel_content").load('html/dashboard.html');
+    $("#movie_content").load('html/dashboard.html');
 });
 
 // Toaster config
