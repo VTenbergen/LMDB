@@ -1,9 +1,8 @@
 package com.capgemini.LMDBforAssessment.model;
 
-import org.hibernate.validator.constraints.Email;
+import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import javax.persistence.*;
-import javax.validation.constraints.Pattern;
 
 @Entity
 public class Movie {
@@ -16,20 +15,20 @@ public class Movie {
     @Length(max = 32, min = 1, message = "Movie title must be between 1 and 32 characters.")
     private String movieTitle;
 
-    @Length(max = 4, min = 1, message = "Year of release number must be between 1 and 4 numbers.")
     @Pattern(regexp="\\d+", message = "Year of release must only contain numbers.")
+    @Length(max = 4, min = 1, message = "Year of release number must be between 1 and 4 numbers.")
     private String releaseYear;
 
-    @Length(max = 2, min = 1, message = "Rating must be a value between 1 and 10.")
     @Pattern(regexp="\\d+", message = "Rating must only contain numbers.")
+    @Length(max = 2, min = 1, message = "Rating must be a value between 1 and 10.")
     private String rating;
 
     private String leadActor;
 
     private String director;
 
-    @Length(max = 3, min = 1, message = "Duration (in minutes) must be between 1 and 3 numbers.")
     @Pattern(regexp="\\d+", message = "Duration (in minutes) must only contain numbers.")
+    @Length(max = 3, min = 1, message = "Duration (in minutes) must be between 1 and 3 numbers.")
     private String duration;
 
     @Length(max = 3, min = 2, message = "Watched must be between 2 and 3 characters.")
