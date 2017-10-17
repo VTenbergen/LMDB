@@ -17,12 +17,14 @@ public class MovieController {
     @Autowired
     private MovieRepository movieRepository;
 
+    // @RequestMapping zorgt voor de mapping naar de URL zoals gedefinieerd
     @RequestMapping(value = "/api/movie" , method = RequestMethod.GET)
     @ResponseBody
     public Iterable<Movie> movieList() {
         return movieRepository.findAll();
     }
 
+    // @RequestMapping zorgt voor de mapping naar de URL zoals gedefinieerd
     @RequestMapping(value = "/api/movie", method = RequestMethod.POST)
     public Movie process(@Valid @RequestBody Movie movie) {
 
@@ -30,6 +32,7 @@ public class MovieController {
         return movie;
     }
 
+    // @RequestMapping zorgt voor de mapping naar de URL zoals gedefinieerd
     @RequestMapping(value = "/api/movie", method = RequestMethod.DELETE)
     public Movie deleteMovie(@RequestBody Movie movie) {
 
@@ -37,6 +40,7 @@ public class MovieController {
         return movie;
     }
 
+    // @RequestMapping zorgt voor de mapping naar de URL zoals gedefinieerd
     @RequestMapping(value = "/api/movie", method = RequestMethod.PUT)
     public Movie updateMovie(@Valid @RequestBody Movie movie) {
 
