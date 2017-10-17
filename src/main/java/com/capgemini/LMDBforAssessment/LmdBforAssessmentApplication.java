@@ -8,6 +8,5 @@ public class LmdBforAssessmentApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LmdBforAssessmentApplication.class, args);
-		System.out.println("Hello World");
 	}
 }
